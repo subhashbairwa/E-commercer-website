@@ -22,7 +22,7 @@ connectCloudinary();
 // Middlewares
 app.use(express.json());
 app.use(cors( {
-  origin: ['http://localhost:3000','http://localhost:5173', 'https://e-commercer-website-user-z7s5.vercel.app','https://fullstack-admin-smoky.vercel.app'],
+  origin: ['http://localhost:3000','http://localhost:5173','https://e-commercer-website-t8ut.vercel.app', 'https://e-commercer-website-user-z7s5.vercel.app','https://fullstack-admin-smoky.vercel.app'],
   credentials: true,
 }));
 
