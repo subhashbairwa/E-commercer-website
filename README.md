@@ -23,9 +23,5 @@ https://e-commercer-website-user-z7s5.vercel.app/
 | Backend     | Node.js, Express, MongoDB             |
 | Deployment  | Vercel (frontend), [Backend Platform] |
 
-## Installation & Setup
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/subhashbairwa/E-commercer-website.git
-   cd E-commercer-website
+
