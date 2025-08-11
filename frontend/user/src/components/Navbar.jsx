@@ -89,39 +89,45 @@ const Navbar = () => {
             className="w-5 cursor-pointer"
             alt="Profile"
           />
-          {token && showProfileMenu && (
-            <div className="absolute right-0 mt-1 w-40 bg-gray-100 rounded shadow-lg py-1 z-50">
-              <p
-            
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100  cursor-pointer"
-              >
-                My Profile
-              </p>
-              <p
-               
-                onClick={()=>navigate("/orders")}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-              >
-                Orders
-              </p>
-              <p
-               
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-                onClick={logout}
-              >
-                Logout
-              </p>
-     
-              <p
-  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
-  onClick={() => window.open('http://localhost:5174/')}
->
-  Admin Panel
-</p>
+        {token && showProfileMenu && (
+  <div className="absolute right-0 mt-1 w-40 bg-gray-100 rounded shadow-lg py-1 z-50">
+    <p
+      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+    >
+      My Profile
+    </p>
+    <p
+      onClick={() => navigate("/orders")}
+      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+    >
+      Orders
+    </p>
+    <p
+      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+      onClick={logout}
+    >
+      Logout
+    </p>
+    <p
+      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+      onClick={() => window.open('http://localhost:5174/')}
+    >
+      Admin Panel
+    </p>
+    {/* ✅ New option to wake up Render backend */}
+    <p
+      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer"
+      onClick={() => {
+        fetch("https://e-commercer-website-4.onrender.com/")
+          .then(() => alert("Backend pinged! It should be active shortly."))
+          .catch(() => alert("Failed to reach backend."));
+      }}
+    >
+      Wake Backend
+    </p>
+  </div>
+)}
 
-
-            </div>
-          )}
         </div>
 
         <Link to="/cart" className="relative">
