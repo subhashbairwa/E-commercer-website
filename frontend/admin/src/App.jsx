@@ -10,8 +10,8 @@ import { ToastContainer} from 'react-toastify';
 export const currency = '$'
 
 
-// export const backendUrl = import.meta.env.VITE_BACKEND_URL
-export const backendUrl ="https://e-commercer-website-4.onrender.com"
+export const backendUrl = import.meta.env.VITE_BACKEND_URL
+// export const backendUrl ="https://e-commercer-website-4.onrender.com"
 
 const App = () => {
 const [token,setToken]=useState(localStorage.getItem('token')?localStorage.getItem('token'):"")
